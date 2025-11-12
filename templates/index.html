@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Alunos</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>Alunos Cadastrados</h1>
+    <a href="{{ url_for('cadastro') }}">Cadastrar novo aluno</a>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Curso</th>
+        </tr>
+        {% for aluno in alunos %}
+        <tr>
+            <td>{{ aluno['id'] }}</td>
+            <td>{{ aluno['nome'] }}</td>
+            <td>{{ aluno['idade'] }}</td>
+            <td>{{ aluno['curso'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

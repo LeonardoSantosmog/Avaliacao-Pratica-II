@@ -1,4 +1,4 @@
-# Prova – Aplicação CRUD de Alunos com Flask & SQLite
+# Avaliação Prática – Aplicação CRUD de Alunos com Flask & SQLite
 
 ## Instruções Iniciais – IMPORTANTE  
 Antes de começar a prova, siga estes passos obrigatórios:

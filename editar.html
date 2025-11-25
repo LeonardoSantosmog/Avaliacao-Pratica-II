@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-container">
+    <div class="form-header">
+        <h2><i class="fas fa-edit"></i> Editar Aluno</h2>
+        <p>Atualize os dados do aluno</p>
+    </div>
+
+    <form method="POST" class="aluno-form">
+        <div class="form-group">
+            <label for="nome">
+                <i class="fas fa-user"></i> Nome Completo
+            </label>
+            <input type="text" id="nome" name="nome" required 
+                   value="{{ aluno[1] }}" placeholder="Digite o nome do aluno">
+        </div>
+
+        <div class="form-group">
+            <label for="idade">
+                <i class="fas fa-birthday-cake"></i> Idade
+            </label>
+            <input type="number" id="idade" name="idade" required 
+                   min="1" max="100" value="{{ aluno[2] }}" placeholder="Idade do aluno">
+        </div>
+
+        <div class="form-group">
+            <label for="curso">
+                <i class="fas fa-book"></i> Curso
+            </label>
+            <input type="text" id="curso" name="curso" required 
+                   value="{{ aluno[3] }}" placeholder="Digite o curso do aluno">
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-large">
+                <i class="fas fa-save"></i> Salvar Alterações
+            </button>
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Cancelar
+            </a>
+        </div>
+    </form>
+</div>
+{% endblock %}

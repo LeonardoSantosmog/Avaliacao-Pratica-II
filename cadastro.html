@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-container">
+    <div class="form-header">
+        <h2><i class="fas fa-user-plus"></i> Cadastrar Novo Aluno</h2>
+        <p>Preencha os dados do aluno abaixo</p>
+    </div>
+
+    <form method="POST" class="aluno-form">
+        <div class="form-group">
+            <label for="nome">
+                <i class="fas fa-user"></i> Nome Completo
+            </label>
+            <input type="text" id="nome" name="nome" required 
+                   placeholder="Digite o nome do aluno">
+        </div>
+
+        <div class="form-group">
+            <label for="idade">
+                <i class="fas fa-birthday-cake"></i> Idade
+            </label>
+            <input type="number" id="idade" name="idade" required 
+                   min="1" max="100" placeholder="Idade do aluno">
+        </div>
+
+        <div class="form-group">
+            <label for="curso">
+                <i class="fas fa-book"></i> Curso
+            </label>
+            <input type="text" id="curso" name="curso" required 
+                   placeholder="Digite o curso do aluno">
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-large">
+                <i class="fas fa-save"></i> Cadastrar Aluno
+            </button>
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+        </div>
+    </form>
+</div>
+{% endblock %}
